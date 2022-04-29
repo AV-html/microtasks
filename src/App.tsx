@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.css';
-import {Header} from "./site/Header";
-import {Body} from "./site/Body";
-import {Footer} from "./site/Footer";
+import {App1} from "./1-nested-components/App1";
+import {App2} from "./2-map/App2";
+
 
 function App() {
     return (
         <>
-            <Header title={'NEW BODY'}/>
-            <Body titleForBody={'NEW BODY'}/>
-            <Footer titleForFooter={'Our Footer'}/>
+            <App1/>
+            <App2/>
         </>
     );
 }
