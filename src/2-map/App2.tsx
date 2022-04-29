@@ -1,6 +1,12 @@
 import React from 'react';
 import {NewComponent} from "./NewComponent";
+import {Cars} from "./Cars";
 
+const topCars = [
+    {manufacturer: "BMW", model: 'm5cs'},
+    {manufacturer: "Mercedes", model: 'e63s'},
+    {manufacturer: "Audi", model: 'rs6'}
+]
 
 const students = [
     {id: 1, name: "James", age: 8},
@@ -22,6 +28,7 @@ export const App2 = () => {
             <hr/>
             <h2>2 - map</h2>
             <NewComponent students={students}/>
+            <Cars topCars={topCars}/>
             <hr/>
         </>
     );
