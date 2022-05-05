@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {FullInput} from './components/FullInput';
+import {Input} from './components/Input';
+import {Button} from './components/Button';
 
 
 export type addMessageType = (newTitle: string) => void
@@ -23,12 +24,23 @@ export function App6() {
         setMessage([{message: newTitle}, ...message])
     }
 
+    let [title, setTitle] = useState<string>('');
+    // console.log(title);
+
+    const callbackButtonHandler = () => {
+        addMessage(title);
+        setTitle('');
+    }
+
     return (
         <div>
             <hr/>
             <h3>Универсальный input</h3>
             <div>
-                <FullInput addMessage={addMessage}/>
+                {/*<FullInput addMessage={addMessage}/>*/}
+                <Input title={title} setTitle={setTitle}/>
+                <Button name={'+'} callback={callbackButtonHandler}/>
+
                 {
                     message.map((el, index) => {
                         return (
